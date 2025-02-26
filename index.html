@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Empowerment for Women</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Financial Empowerment </h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#budgeting">Budgeting</a></li>
+                <li><a href="#expense-tracker">Expense Tracker</a></li>
+                <li><a href="#financial-planning-section">Financial Planning</a></li>
+                <li><a href="#calculators">Calculators</a></li>
+                <li><a href="#investment-section">Investment Tracker</a></li>
+                <li><a href="#ai">AI Analysis</a></li>
+                <li><a href="#learning">Learning Modules</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Financial Empowerment Web Portal</h2>
+            <p>Take control of your finances with AI-powered insights and interactive learning modules.</p>
+        </section>
+
+        <section id="budgeting">
+            <h2>Budgeting</h2>
+            <p>Plan your budget wisely.</p>
+            <input type="number" id="incomeBudget" placeholder="Enter your monthly income">
+            <input type="number" id="expensesBudget" placeholder="Enter your total expenses">
+            <button onclick="calculateBudget()">Calculate Savings</button>
+            <p id="budgetResult"></p>
+        </section>
+
+        <section id="expense-tracker">
+            <h2>Expense Tracker</h2>
+            <p>Track and manage your expenses efficiently.</p>
+        
+            <label for="budget">Set Monthly Budget:</label>
+            <input type="number" id="budget" placeholder="Enter your budget" />
+        
+            <label for="expense-name">Expense Name:</label>
+            <input type="text" id="expense-name" placeholder="Enter expense name" />
+        
+            <label for="expense-amount">Amount:</label>
+            <input type="number" id="expense-amount" placeholder="Enter amount" />
+        
+            <button onclick="addExpense()">Add Expense</button>
+        
+            <h3>Total Expenses: ₹<span id="total-expenses">0</span></h3>
+        
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div id="expense-progress" class="progress-bar"></div>
+            </div>
+        
+            <ul id="expense-list"></ul>
+        </section>
+        
+       
+
+        <section id="financial-planning-section">
+            <h2>Financial Planning</h2>
+            <p>Enter your income and expenses to get a personalized financial plan.</p>
+
+            <div class="input-container">
+                <input type="number" id="incomePlan" placeholder="Monthly Income">
+                <input type="number" id="expensesPlan" placeholder="Monthly Expenses">
+                <input type="number" id="savingsGoal" placeholder="Savings Goal">
+                <button onclick="calculatePlan()">Generate Plan</button>
+            </div>
+
+            <div id="planResult"></div>
+        </section>
+
+        <section id="calculators">
+            <h2>Financial Calculators</h2>
+            <p>Use our SIP and EMI calculators for better financial planning.</p>
+            <button onclick="calculateSIP()">SIP Calculator</button>
+            <button onclick="calculateEMI()">EMI Calculator</button>
+        </section>
+
+        <section id="investment-section">
+            <h2>Investment Plan Analysis</h2>
+            <p>Enter your investments to analyze:</p>
+
+            <div class="input-container">
+                <input type="text" id="investmentType" placeholder="Investment Type (e.g., Stocks, Bonds)">
+                <input type="number" id="investmentAmount" placeholder="Amount Invested">
+                <select id="riskLevel">
+                    <option value="low">Low Risk</option>
+                    <option value="medium">Medium Risk</option>
+                    <option value="high">High Risk</option>
+                </select>
+                <button onclick="addInvestment()">Add Investment</button>
+                <button onclick="analyzeInvestments()">Analyze</button>
+            </div>
+
+            <ul id="investmentList"></ul>
+            <p id="investmentResult"></p>
+        </section>
+
+        <section id="ai">
+            <h2>AI Investment Analysis</h2>
+            <p>AI-powered insights to optimize your investment strategies.</p>
+            <button onclick="aiAnalysis()">Get AI Summary</button>
+            <p id="aiResult"></p>
+        </section>
+
+        <section id="learning">
+            <h2>Interactive Learning Modules</h2>
+            <p>Engage in gamified learning experiences to enhance financial literacy.</p>
+            <div class="learning-container">
+                <button onclick="showModule('smartSavings')">Smart Savings Strategies</button>
+                <button onclick="showModule('importanceSavings')">Importance of Savings</button>
+                <button onclick="showModule('savingsPlans')">Smart Savings Plans</button>
+                <button onclick="showModule('highYield')">High-Yield Savings Accounts</button>
+                <button onclick="showModule('investmentBasics')">Understanding Investments</button>
+                <button onclick="showModule('loanManagement')">Loan & EMI Management</button>
+                <button onclick="showModule('taxPlanning')">Tax Planning</button>
+            </div>
+            <div id="learningContent">
+                <p>Select a topic to start learning.</p>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Financial Empowerment by Keerthana Baineni. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
